@@ -5,23 +5,24 @@ using namespace std;
 
 int main()
 {
-	float n1, n2;
-	cout << "Digite um numero: ";
-	cin >> n1;
+	double a, b, c;
 
-	cout << "Digite um numero: ";
-	cin >> n2;
+	cout << "Digite o valor de A: ";
+	cin >> a;
+	cout << "Digite o valor de B: ";
+	cin >> b;
+	cout << "Digite o valor de C: ";
+	cin >> c;
 
-
-	if (n2 != 0)
+	if (a + b < a + c)
 	{
-		cout << "O resultado da divisao eh: " << n1 / n2 << endl;
-	}
-	else
 
-	{
-		cout << "Invalido!" << endl;
+		cout << "A soma de a+b eh menor que a+c" << endl;
+		cout << "A soma de" << a << "+" << b << "eh menor que " << a << "+" << c << endl;
 	}
+
+
+
 	system("pause");
 	return 0;
 }
