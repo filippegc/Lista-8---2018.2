@@ -2,27 +2,64 @@
 
 using namespace std;
 
-
 int main()
 {
-	double a, b, c;
+	float  notaGa, notaGb, notaGc, media;
+	char rec;
 
-	cout << "Digite o valor de A: ";
-	cin >> a;
-	cout << "Digite o valor de B: ";
-	cin >> b;
-	cout << "Digite o valor de C: ";
-	cin >> c;
+	cout << "Informe a nota de GA: ";
+	cin >> notaGa;
+	cout << "Informe a nota de GB: ";
+	cin >> notaGb;
 
-	if (a + b < a + c)
+
+	media = (notaGa + 2 * notaGb) / 3;
+
+	if (media >= 6)
 	{
+		cout << "Aprovado! " << media << endl;
+	}
+	else
+	{
+		cout << "Reprovado! " << media << endl;
+		cout << "Deseja recurperar GA ou GB? ";
+		cin >> rec;
 
-		cout << "A soma de a+b eh menor que a+c" << endl;
-		cout << "A soma de" << a << "+" << b << "eh menor que " << a << "+" << c << endl;
+		if (tolower(rec) == 'a')
+		{
+			cout << "Informe a nota do GC: ";
+			cin >> notaGc;
+
+			media = (notaGc + 2 * notaGb) / 3;
+
+			if (media >= 6)
+			{
+				cout << "Aprovado! " << media << endl;
+			}
+			else 
+			{
+				cout << "Reprovado! " << media << endl;
+			}
+		}
+		else if (tolower(rec) == 'b')
+		{
+			cout << "Informe a nota do GC: ";
+			cin >> notaGc;
+
+			media = (notaGa + 2 * notaGc) / 3;
+
+			if (media >= 6)
+			{
+				cout << "Aprovado! " << media << endl;
+			}
+			else
+			{
+				cout << "Reprovado! " << media << endl;
+			}
+		}
+
 	}
 
-
-
 	system("pause");
-	return 0;
+	return  0;
 }
